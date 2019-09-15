@@ -41,14 +41,37 @@
   position: relative;
   font-family: $fontPoppins;
   display: inline-block;
-  padding: 0.6rem 1.6rem;
   margin: 1rem 0;
   letter-spacing: 2px;
   background-color: $purple;
   border-radius: 5px;
-  *{color: $white;}
+}
+.buttonLink{
+  color: $white;
+  padding: 0.6rem 1.6rem;
 }
 .button:hover{
   background-color: rgba(94,44,237,.8);
   *{color:rgba(255,255,255,.8)}
+}
+
+.section-banner__pages{
+  min-height: 30vh;
+  position: relative;
+  background: {
+    image: url('../../img/1-banner.png');
+    size: cover;
+    position: center;
+    repeat: no-repeat;
+  }
+  &::before{
+    @include pseudoelement();
+  }
+
+  @media screen and (min-width:768px){
+    background-position: 0 -100px;
+  }
+  @media screen and (min-width:991px){
+    background-position: 0 -160px;
+  }
 }

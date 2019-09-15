@@ -1,7 +1,8 @@
 import React from 'react';
-import {BrowserRouter as Router} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import MainMenu from './components/Organisms/MainMenu'
-import Banner from './components/Organisms/Banner'
+import Home from './components/Pages/Home'
+import About from './components/Pages/About'
 
 
 function App() {
@@ -9,8 +10,12 @@ function App() {
     <>
       <Router>
         <MainMenu />
+        <Switch>
+          <Route path="/" exact component={ Home}/>
+          <Route path="/about" exact component={ About}/>
+        </Switch>
       </Router>
-      <Banner />
+      
     </>
     
   )}
