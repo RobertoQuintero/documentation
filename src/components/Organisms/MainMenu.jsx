@@ -11,9 +11,13 @@ constructor(props){
   this.handleToggle = this.handleToggle.bind(this)
 }
 handleToggle =()=>{
+
 this.state.show==='show'
   ? this.setState({show: ''})
   : this.setState({show: 'show'})
+}
+changeClass=()=>{
+  this.setState({show: ''})
 }
   render(){
     return ( 
@@ -23,7 +27,7 @@ this.state.show==='show'
           <i className="section-menu__hamburguer" onClick={this.handleToggle}>
             <FontAwesomeIcon icon={faBars} />
           </i>
-          <Navigation show={this.state.show}/>
+          <Navigation show={this.state.show} onClick={this.changeClass.bind(this)}/>
         </header>
       </div>
      );

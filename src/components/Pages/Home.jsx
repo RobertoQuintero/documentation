@@ -1,14 +1,13 @@
 import React from 'react'
-import Banner from '../Organisms/Banner'
+import withTemplate from '../HOC/withTemplate'
 import Services from '../Organisms/Services'
 
 const Home = () =>{
 
   return(
     <>
-      <Banner />
       <Services />
     </>
   )
 }
-export default Home
+export default withTemplate('index',Home)

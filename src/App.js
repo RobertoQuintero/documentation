@@ -4,7 +4,6 @@ import MainMenu from './components/Organisms/MainMenu'
 import Home from './components/Pages/Home'
 import About from './components/Pages/About'
 
-
 function App() {
   return (
     <>
@@ -19,5 +18,4 @@ function App() {
     </>
     
   )}
-
 export default App;

@@ -14,4 +14,4 @@ const AboutGrid = () => {
   )
 }
 
-export default AboutGrid
+export default  AboutGrid
