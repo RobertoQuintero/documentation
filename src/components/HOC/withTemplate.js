@@ -15,8 +15,8 @@ const withTemplate = (page,WrappedComponent) => {
         <>
           {
             page === 'index'
-            ? <Banner />
-            : <BannerPages />
+              ? <Banner />
+              : <BannerPages />
           }
           <WrappedComponent {...this.props}/>
           <Footer />
