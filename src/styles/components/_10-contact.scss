@@ -1,0 +1,52 @@
+.section-contact__iframe{
+  width: 100%;
+  min-height: 550px;
+  border: none;
+}
+.section-contact__flex{
+  padding: 1rem;
+
+  &-form{
+    font-family: $fontPoppins;
+    padding: 1rem 0 0;
+  }
+}
+.contact-form__title{
+  font-weight: 400;
+  padding: 1rem 0;
+}
+.contact-form__box{
+
+  &-item{
+    width: 100%;
+    border: none;
+    background-color: rgba($gray,.5);
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    font-family: inherit;
+  }
+  
+}
+.contact-form__submit{
+  background-color: $purple;
+  color: $white;
+  font-size: $fontSize-n;
+  letter-spacing: 1px;
+
+}
+
+@media screen and (min-width:768px){
+
+  .section-contact__iframe{
+    min-height: 500px;
+  }
+  .section-contact__flex{
+    display: flex;
+    justify-content: space-around;
+
+    &-map,
+    &-form{
+        flex-basis: 40%;
+    }
+  }
+}

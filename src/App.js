@@ -6,6 +6,7 @@ import About from './components/Pages/About'
 import Portfolio from './components/Pages/Portfolio'
 import NotFound from './components/Pages/NotFound'
 import Register from './components/Pages/Register'
+import Contact from './components/Pages/Contact'
 
 function App() {
   
@@ -19,6 +20,7 @@ function App() {
           <Route path="/about" exact component={ About}/>
           <Route path="/portfolio" exact component={ Portfolio}/>
           <Route path="/register" exact component={ Register }/>
+          <Route path="/contact" exact component={ Contact }/>
           <Route component={NotFound}/>
         </Switch>
       </Router>
