@@ -1,0 +1,69 @@
+.section-price{
+  background-color: $grayBack;
+
+  &__flex{
+    padding: 1rem;
+
+    &-card{
+      background-color: $white;
+      text-align: center;
+      padding: 1rem;
+      border: 1px solid $gray;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+  }
+}
+.card-item{
+
+  &__icon{
+    width: 60px;
+    height: 60px;
+    background-color: $gray;
+    @include flex(center);
+    border-radius: 50%;
+    margin: 0 auto;
+    color: $purple;
+    font-size: $fontSize-m;
+
+  }
+
+  &__title{
+    padding: 0.5rem;
+    font-size: $fontSize-s;
+
+  }
+  &__price{
+    font-size: $fontSize-n*2;
+    color: #6f6f6f;
+    display: flex;
+    justify-content: center;
+    span{
+      position: relative;
+      top: .3rem;
+      font-size: $fontSize-xs;
+      font-weight: normal;
+      color: $black;
+    }
+  }
+
+  &__paragraph{
+    font-size: $fontSize-s;
+    padding-top: 1rem;
+    color: $grayText;
+    line-height: 1.6;
+    letter-spacing: 1px;
+  }
+}
+
+@media screen and (min-width:678px){
+  .section-price__flex{
+    display: flex;
+    justify-content: space-between;
+
+    &-card{
+      flex-basis: 32%;
+    }
+  }
+
+}

@@ -1,0 +1,87 @@
+.section-portfolio{
+
+  &__lightbox{
+    padding: 1rem 0;
+    &-image{
+      position: relative;
+    }
+  }
+  &__lightbox-grid{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__lightbox-item{
+    
+    padding: 1rem 0;
+    flex-basis: 48%;
+    @media screen and (min-width:767px){
+      flex-basis: 23%
+    }
+  }
+    
+}
+.whiteLabel{
+  position: relative;
+  display: block;
+}
+
+.whiteLabel::after{
+  @include pseudoelement();
+  background-color: rgba(255,255,255,.2);
+}
+
+.whiteLabel:hover .section-portfolio__lightbox-image{
+  z-index: $z-tooltip;
+}
+
+//lightbox styles
+
+.lightbox-overlay {
+  position : fixed;
+  top : 0;
+  left : 0;
+  width : 100%;
+  height : 100%;
+  background : rgba(#000,.8);
+  display : flex;
+  z-index : 100;
+}
+
+.lightbox-container {
+  position : relative;
+  width : 90%;
+  max-width : 800px;
+  margin : auto;
+  background : #fff;
+  padding : 1em;
+  border-radius : .2em;
+
+  img {
+    width : 70%;
+    margin: 0 auto;
+  }
+}
+
+.close-modal {
+  $size: 1.8em;
+  background : $purple;
+  color: $white;
+  position : absolute;
+  width : $size;
+  height : $size;
+  text-align : center;
+  line-height : $size;
+  top : - $size / 2;
+  right: - $size / 2;
+  border-radius : 50%;
+  cursor: pointer;
+}
+
+.lightbox-description {
+  text-align : center;
+  font-size : 1.1em;
+  padding: 1rem 0;
+}
+
+
