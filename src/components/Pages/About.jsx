@@ -8,7 +8,6 @@ const About = () => {
 
   return(
     <>
-
     <section className="section-about break-points p-section">
       <SectionTitle small='How we work' big='HOW WE DEAL ABOUT BUSINESS' />
       <AboutGrid />

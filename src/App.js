@@ -12,7 +12,6 @@ function App() {
   
 
   return (
-    <>
       <Router>
         <MainMenu />
         <Switch>
@@ -24,8 +23,5 @@ function App() {
           <Route component={NotFound}/>
         </Switch>
       </Router>
-      
-    </>
-    
   )}
 export default App;

@@ -13,21 +13,41 @@ import g8 from '../../img/15-g8.jpg'
 import Price from '../Organisms/Price'
 
 const Portfolio = () => {
+const images = [g1,g2,g3,g4,g5,g6,g7,g8]
 
+const openLightbox=(e)=>{
+  e.preventDefault()
+  let lightboxElement = document.createElement('div')
+  lightboxElement.innerHTML = `
+  <div class="lightbox-overlay">
+    <figure class="lightbox-container">
+      <div class="close-modal">✖</div>
+      <img src="${e.target.src}" class="ligthbox-image">
+      <figcaption>
+        <p class="lightbox-description">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+      </figcaption>
+    </figure>
+  </div>
+`
+document.body.appendChild(lightboxElement)
+closeModal(lightboxElement)
+}
+const closeModal = modalElement =>{
+  let closeModal = modalElement.querySelector('.close-modal')
+
+  closeModal.addEventListener('click', e=>{
+      document.body.removeChild(modalElement)
+  })
+}
+
+const lightboxItems = images.map(image=>(<LightboxItem key={image.toString()} image={image} openLightbox={(e)=>openLightbox(e)}/>))
   return ( 
    <>
     <section className="section-portfolio p-section break-points">
       <SectionTitle small='our recent works' big='OUR PORTFOLIO'/>
       <div className="section-portfolio__lightbox">
         <div className="section-portfolio__lightbox-grid">
-          <LightboxItem image={g1} />
-          <LightboxItem image={g2} />
-          <LightboxItem image={g3} />
-          <LightboxItem image={g4} />
-          <LightboxItem image={g5} />
-          <LightboxItem image={g6} />
-          <LightboxItem image={g7} />
-          <LightboxItem image={g8} />
+         {lightboxItems}
         </div>
       </div>
     </section>
